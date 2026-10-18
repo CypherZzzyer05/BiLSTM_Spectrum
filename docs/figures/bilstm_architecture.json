@@ -1,0 +1,82 @@
+{
+  "model_config": {
+    "spectrum_points": 1000,
+    "patch_count": 100,
+    "embedding_dim": 128,
+    "hidden_size": 64,
+    "recurrent_layers": 2,
+    "mlp_dim": 256,
+    "dropout": 0.1,
+    "geometry_dim": 7,
+    "angle_symmetry": "square_periodic",
+    "position_encoding": true
+  },
+  "module_shapes": {
+    "patch_embedding": [
+      2,
+      128,
+      100
+    ],
+    "position_encoding": [
+      2,
+      100,
+      128
+    ],
+    "bilstm": [
+      2,
+      100,
+      128
+    ],
+    "h_n": [
+      4,
+      2,
+      64
+    ],
+    "c_n": [
+      4,
+      2,
+      64
+    ],
+    "final_norm": [
+      2,
+      100,
+      128
+    ],
+    "mean_pool": [
+      2,
+      128
+    ],
+    "regressor.0": [
+      2,
+      256
+    ],
+    "regressor.1": [
+      2,
+      256
+    ],
+    "regressor.2": [
+      2,
+      7
+    ],
+    "regressor.3": [
+      2,
+      7
+    ]
+  },
+  "wavelength_range_nm": [
+    700.0,
+    1700.0
+  ],
+  "parameter_count": 235143,
+  "parameter_counts": {
+    "patch_embedding": 1408,
+    "bilstm": 198656,
+    "final_norm": 256,
+    "regressor": 34823
+  },
+  "checkpoint_sha256": "7b5452f26c150b0cd23e0a97c5d5b935f37d38dfa0d736c42cf372f901e89143",
+  "model_source_sha256": "e30a02e5126f8a3258308e30a5189732df720c94f2af5fac8323a3f5c9ce0de1",
+  "probe": "CPU eval/inference_mode; two synthetic zero spectra only for shape verification",
+  "training_performed": false,
+  "diagram_source_sha256": "6e5b9d9d741eeecee0938bfe33bb3d5e5686c3d29bfea130e2b8fe7258baa158"
+}

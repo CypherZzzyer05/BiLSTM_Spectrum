@@ -6,6 +6,12 @@
 
 输出顺序为 `P, L, H, dX, dY, theta_odd_deg, theta_even_deg`，前五项为 nm，后两项为 deg。两组角分别按正方形的 90° 周期计算误差。尺寸边界和波长网格随检查点保存。
 
+## 模型结构图
+
+![已训练 BiLSTM 的结构与张量尺寸](docs/figures/bilstm_architecture.png)
+
+[可编辑 SVG](docs/figures/bilstm_architecture.svg)。运行 `python draw_architecture.py` 可从已保存的权重与配置重新生成；脚本先以真实前向传播核对张量形状和参数量，不启动训练。对应形状记录保存在 `docs/figures/bilstm_architecture.json`。
+
 ## 运行
 
 在 PyCharm 中打开本项目根目录。本机解释器可选 `D:\Anaconda3\envs\transformer_env\python.exe`，已经安装所需包。其他环境使用 `python -m pip install -r requirements.txt`；GPU 使用需安装与机器匹配的 PyTorch。
