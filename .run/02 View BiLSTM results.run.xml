@@ -9,7 +9,7 @@
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_training.py" />
-    <option name="PARAMETERS" value="--output-root runs/au100_bilstm_100" />
+    <option name="PARAMETERS" value="--run results/au100_seed42 --no-save" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="false" />

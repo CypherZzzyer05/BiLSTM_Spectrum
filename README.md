@@ -11,7 +11,7 @@
 在 PyCharm 中打开本项目根目录。本机解释器可选 `D:\Anaconda3\envs\transformer_env\python.exe`，已经安装所需包。其他环境使用 `python -m pip install -r requirements.txt`；GPU 使用需安装与机器匹配的 PyTorch。
 
 - `01 Train standalone BiLSTM`：使用附带的 100 条样本训练。
-- `02 View BiLSTM results`：训练完成后查看学习曲线和测试集误差。
+- `02 View BiLSTM results`：直接查看仓库附带的 100 样本训练结果，不要求先重新训练，也不改写保存的图。新训练的结果可按下面的命令从 `runs/` 查看。
 
 也可以在项目根目录运行：
 

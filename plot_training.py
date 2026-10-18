@@ -14,7 +14,7 @@ def latest_run(output_root=None):
     return Path(json.loads(pointer.read_text(encoding='utf-8'))['run_dir'])
 
 
-def plot_training(run_dir, show=True):
+def plot_training(run_dir, show=True, save=True):
     import matplotlib
     if not show:
         matplotlib.use('Agg')
@@ -99,8 +99,9 @@ def plot_training(run_dir, show=True):
                 f"数据级别：{report['quality_level']}\n运行：{run_dir.name}")
     axes[1, 1].text(0, 1, text, va='top', color='#334969', linespacing=1.3 if rotated else 1.5)
     output = run_dir / 'training_preview.png'
-    fig.savefig(output, dpi=160, facecolor=fig.get_facecolor())
-    print(f'Training preview: {output}')
+    if save:
+        fig.savefig(output, dpi=160, facecolor=fig.get_facecolor())
+        print(f'Training preview: {output}')
     if show:
         plt.show()
     else:
@@ -113,8 +114,9 @@ def main():
     parser.add_argument('--run', type=Path, help='Run directory; defaults to latest saved training run')
     parser.add_argument('--output-root', type=Path, help='Training output root containing latest_run.json')
     parser.add_argument('--no-show', action='store_true')
+    parser.add_argument('--no-save', action='store_true', help='View an archived result without rewriting its image')
     args = parser.parse_args()
-    plot_training(args.run or latest_run(args.output_root), show=not args.no_show)
+    plot_training(args.run or latest_run(args.output_root), show=not args.no_show, save=not args.no_save)
 
 
 if __name__ == '__main__':
