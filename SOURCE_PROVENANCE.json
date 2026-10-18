@@ -1,0 +1,13 @@
+{
+  "source_commit": "93e0bce",
+  "reused_and_adapted": [
+    "spectrum_dataset.py",
+    "train_metaformer.py",
+    "plot_training.py",
+    "tests/test_training.py",
+    "file utilities"
+  ],
+  "original_project_unchanged": true,
+  "dataset_sha256": "591ca0f4d9f4fc0be9803f3a566f72eee1ee3ac871ad9d03472b93a732aed0e3",
+  "scope": "Independent BiLSTM, no simulator integration, no Transformer or ResNet blocks"
+}

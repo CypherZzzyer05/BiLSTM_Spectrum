@@ -1,0 +1,34 @@
+{
+  "dataset_sha256": "591ca0f4d9f4fc0be9803f3a566f72eee1ee3ac871ad9d03472b93a732aed0e3",
+  "split_sizes": {
+    "train": 80,
+    "val": 10,
+    "test": 10
+  },
+  "seed": 42,
+  "model_parameters": 235143,
+  "epochs_completed": 41,
+  "best_epoch": 21,
+  "optimizer_steps": 410,
+  "training_loop_seconds": 4.765999999999622,
+  "test_mse": 0.06679421587766829,
+  "train_mean_baseline_test_mse": 0.07190142598503563,
+  "test_mse_improvement_over_mean_percent": 7.1030720704068795,
+  "paired_bootstrap_mean_mse_gain_95pct_interval": [
+    -0.008289413549937306,
+    0.018018150795251126
+  ],
+  "bootstrap_definition": "Resample the 10 paired test rows 10000 times, seed 20261018; baseline MSE minus model MSE; diagnostic only, no model selection",
+  "cpu_reload_max_absolute_prediction_difference": 1.787738769243319e-07,
+  "source_files_unchanged_after_training": true,
+  "checkpoint_sha256": "7b5452f26c150b0cd23e0a97c5d5b935f37d38dfa0d736c42cf372f901e89143",
+  "evaluation_limit": "Geometry errors only; no spectral reconstruction or FDTD validation; pipeline_validation data; one training seed and 10 test rows",
+  "precision_audit": "TF32 disabled for FP32 evaluation after detecting batch-dependent cuDNN TF32/CPU discrepancies; this run was repeated for numerical portability, not test-metric tuning",
+  "historical_resnet_metaformer": {
+    "parameters": 4081415,
+    "test_mse": 0.06505033859242848,
+    "metrics_sha256": "ebfa66a1b0de4ecadc285d5d1ad6a062ff084eba7470e90b199bcf6d9c67243b",
+    "same_dataset_and_splits": true,
+    "comparison_limit": "Historical reference only; different capacity; plain Metaformer without ResNet was not retrained in this experiment"
+  }
+}
